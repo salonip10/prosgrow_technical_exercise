@@ -14,10 +14,10 @@
 The AI assumed the ProsGrow API's response shape exactly matches the OpenAI chat completions format (`choices[0].message.content`) based on the staging docs, and it assumed the error response bodies would be standard. It also generated example outputs in `integration_note.md` with placeholder model names and fabricated latency numbers, since it had no access to the live staging environment. The AI did not discover that the API exposes an undocumented `GET /v1/models` catalog endpoint, and it could not predict that the docs' statement about "chat SKUs being catalog-only during preview" was outdated.
 
 ## How the Team Tested and Corrected the Output
-- Student B ran all four test scenarios against the real staging API and recorded actual HTTP status codes, response bodies, and latency in `TEST_RESULTS.md`
+- Prerana ran all four test scenarios against the real staging API and recorded actual HTTP status codes, response bodies, and latency in `TEST_RESULTS.md`
 - Discovered the real working model (`deepseek-v4-pro`) via the undocumented `GET /v1/models` endpoint — AI had no knowledge of valid model names
 - The integration note's working example and errors table were updated with real captured output after live testing
-- The docs-vs-actual table in `integration_note.md` Section 8 was filled in from B's real findings, not AI guesses
+- The docs-vs-actual table in `integration_note.md` Section 8 was filled in from Prerana's real findings, not AI guesses
 - The unit test suite (`python -m unittest discover -s tests -v`) was run locally to verify all 12 tests pass before submission
 
 ## What the Team Would Improve with Two Additional Hours
