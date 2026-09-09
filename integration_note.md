@@ -58,7 +58,7 @@ The validation tool reads the key from `PROSGROW_API_KEY` and injects it into th
 | Field | Value |
 |-------|-------|
 | Base URL (staging) | `https://staging.prosgrow.ai/v1` |
-| Chat completions endpoint | `POST /v1/chat/completions` |
+| Chat completions endpoint | `POST /chat/completions` |
 | Content-Type | `application/json` |
 
 > **Docs vs. actual behavior:** The written documentation references `https://api.prosgrow.ai` as the base URL, but the docs' own example `curl` command targets `https://staging.prosgrow.ai`. This tool defaults to the staging host per the exercise's staging-only instruction. This discrepancy should be clarified in the official docs.
