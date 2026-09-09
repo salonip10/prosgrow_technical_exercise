@@ -33,16 +33,20 @@ response, and reports the HTTP status and round-trip latency.
 pip install -r requirements.txt
 ```
 
-Copy `.env.example` to `.env`, fill in your real key, and export the
-variables (or load them however you normally manage env vars):
+Copy `.env.example` to `.env` and fill in your real key. `.env` is loaded
+automatically (via `python-dotenv`, see `config.py`) — no need to `export`
+anything yourself:
 
-```bash
-export PROSGROW_API_KEY=sk-...
-export PROSGROW_API_BASE_URL=https://api.prosgrow.ai/v1   # optional, has a default
-export PROSGROW_DEFAULT_MODEL=your-default-model          # optional
+```
+PROSGROW_API_KEY=sk-...
+# optional overrides below - leave unset unless you need to change them
+# PROSGROW_API_BASE_URL=https://staging.prosgrow.ai/v1  (this is already the default)
+# PROSGROW_DEFAULT_MODEL=your-default-model
 ```
 
-`.env` is git-ignored — never commit a real API key.
+`.env` is git-ignored — never commit a real API key. This exercise is
+staging-only, so do not point `PROSGROW_API_BASE_URL` at
+`https://api.prosgrow.ai` (production).
 
 ## Usage
 

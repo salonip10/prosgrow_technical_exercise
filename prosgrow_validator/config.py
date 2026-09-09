@@ -4,7 +4,12 @@ from __future__ import annotations
 
 import os
 
+from dotenv import load_dotenv
+
 from .client import DEFAULT_BASE_URL
+
+# picks up a .env file in the current directory, if there is one
+load_dotenv()
 
 API_KEY_ENV_VAR = "PROSGROW_API_KEY"
 BASE_URL_ENV_VAR = "PROSGROW_API_BASE_URL"
