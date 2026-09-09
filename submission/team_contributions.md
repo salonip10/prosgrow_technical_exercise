@@ -14,7 +14,7 @@ Tested API behavior and documented results (Task 2).
 - Obtained the API key from the staging console
 - Ran four real scenarios against `https://staging.prosgrow.ai/v1`: valid request, invalid API key, invalid model, and one additional scenario
 - Recorded HTTP status codes, actual response bodies, and latency
-- Wrote `validation_results.md` with pass/fail verdicts and recommended API/documentation improvements
+- Wrote `TEST_RESULTS.md` with pass/fail verdicts and recommended API/documentation improvements
 
 ## Aadesh Thoppae
 Created developer documentation and submission materials.
